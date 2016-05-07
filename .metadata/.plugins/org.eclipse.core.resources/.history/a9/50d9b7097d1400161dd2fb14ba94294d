@@ -119,45 +119,11 @@ public class GameBoard extends Canvas implements MouseListener
 	{
 		String winner="";
 		//horizontal
-		for(int c = 0; c<board.getNumRows(); c++)
-		{
-			for(int i = 0; i<board.getNumCols()-3; i++)
-			{
-				Piece h1 = (Piece)board.getSpot(c,i);
-				Piece h2 = (Piece)board.getSpot(c,i+1);
-				Piece h3 = (Piece)board.getSpot(c,i+2);
-				Piece h4 = (Piece)board.getSpot(c,i+3);
-				
-				if(h1==null||h2==null||h3==null||h4==null) continue;
-				
-				if(h1.getColor().equals(h2.getColor()) && h1.getColor().equals(h3.getColor()) && h1.getColor().equals(h4.getColor()))
-				{
-					winner = h1.getColor() + " wins horizontally!";
-					break;
-				}
-			}
-		}
-		//------------------------------------------------
+		
+		//
 		
 		//vertical
-		for(int c = 0; c<board.getNumCols(); c++)
-		{
-			for(int i = 0; i<board.getNumRows()-3; i++)
-			{
-				Piece h1 = (Piece)board.getSpot(c,i);
-				Piece h2 = (Piece)board.getSpot(c,i+1);
-				Piece h3 = (Piece)board.getSpot(c,i+2);
-				Piece h4 = (Piece)board.getSpot(c,i+3);
-				
-				if(h1==null||h2==null||h3==null||h4==null) continue;
-				
-				if(h1.getColor().equals(h2.getColor()) && h1.getColor().equals(h3.getColor()) && h1.getColor().equals(h4.getColor()))
-				{
-					winner = h1.getColor() + " wins vertically!";
-					break;
-				}
-			}
-		}
+		
 		//
 		
 		//diagonal 1
